@@ -17,7 +17,7 @@ class FontAwesome {
 	 */
 	public static function getVersion() {
 		$changes = file_get_contents(__DIR__.'/../../../../fortawesome/font-awesome/CHANGELOG.md');
-		if ($CHANGES !== FALSE) {
+		if ($changes !== FALSE) {
 			$matches = array();
 			if (preg_match_all('/\\[([\\d\\.]+)\\]/', $changes, $matches)) {
 				return $matches[1][0];
