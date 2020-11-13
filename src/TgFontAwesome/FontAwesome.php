@@ -11,14 +11,19 @@ class FontAwesome {
 
     public const JS = "js";
 
-	private static $VERSION = '5.15.1';
-
 	/**
 	 * Returns the version of this library.
 	 * @return string the version number
 	 */
 	public static function getVersion() {
-		return self::$VERSION;
+		$changes = file_get_contents(__DIR__.'/../../../../fortawesome/font-awesome/CHANGELOG.md');
+		if ($CHANGES !== FALSE) {
+			$matches = array();
+			if (preg_match_all('/\\[([\\d\\.]+)\\]/', $changes, $matches)) {
+				return $matches[1][0];
+			}
+		}
+		throw new FontAwesomeException('Cannot detect Font Awesome version');
 	}
 
     /**
@@ -31,7 +36,7 @@ class FontAwesome {
      * @return string the URI to the FontAwesome library
      */
     public static function getUri($module = 'all.min', $type = self::CSS) {
-        $localPath = realpath(__DIR__.'/../../fontawesome-free-'.self::$VERSION.'-web');
+        $localPath = realpath(__DIR__.'/../../../../fortawesome/font-awesome');
         
         if ($type == self::CSS) {
             $localPath .= '/css/'.$module.'.css';
