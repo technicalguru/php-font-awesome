@@ -11,6 +11,16 @@ class FontAwesome {
 
     public const JS = "js";
 
+	private static $VERSION = '5.15.1';
+
+	/**
+	 * Returns the version of this library.
+	 * @return string the version number
+	 */
+	public static function getVersion() {
+		return self::$VERSION;
+	}
+
     /**
      * Returns the URI from where the font library can be downloaded.
      *
