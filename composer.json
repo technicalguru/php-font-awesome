@@ -1,0 +1,29 @@
+{
+    "name": "technicalguru/font-awesome",
+    "description": "Provide Free Font Awesome to PHP apps",
+    "type": "library",
+    "keywords" : [
+        "icons",
+        "icon-library",
+        "font-awesome",
+        "awesome"
+    ],
+    "license" : "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "technicalguru",
+            "email": "github@ralph-schuster.eu"
+        }
+    ],
+    "require" : {
+        "php" : ">=7.0.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "TgFontAwesome\\" : "src/TgFontAwesome/"
+        }
+    },
+    "require-dev" : {
+        "phpunit/phpunit" : "^9"
+    }
+}
