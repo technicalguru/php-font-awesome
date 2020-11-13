@@ -6,7 +6,7 @@ namespace TgFontAwesome;
  * Exception for any FontAwesome related errors.
  * <p>The $info field can contain additional information about the error.</p>
  */
-class FontAwesomeException extends Exception {
+class FontAwesomeException extends \Exception {
 
 	public $info;
 
