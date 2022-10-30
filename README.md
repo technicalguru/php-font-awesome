@@ -8,8 +8,8 @@ This project is licensed under [GNU LGPL 3.0](LICENSE.md).
 
 ## By Composer
 
-```
-composer install technicalguru/font-awesome
+```sh
+composer require technicalguru/font-awesome
 ```
 
 ## By Package Download
